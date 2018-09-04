@@ -1,0 +1,133 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    style="@style/Fundo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lblTitulo"
+            style="@style/Toolbar"
+            android:text="@string/TituloPrincipal" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblTitulo"
+            android:gravity="center">
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgExibir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ambos" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tablelblIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/lblIdade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Qual a sua idade?" />
+                </TableRow>
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Spinner
+                    android:id="@+id/spin_idade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tablelblMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/lblMes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Em qual mês engravidou?" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tablespinnMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Spinner
+                    android:id="@+id/spin_mes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnCalcular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/btncalcular"
+                    android:background="@drawable/transparent"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/btnSobre"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:background="@drawable/transparent"
+                app:srcCompat="@drawable/btnsobre" />
+        </TabWidget>
+
+    </RelativeLayout>
+</TabHost>
